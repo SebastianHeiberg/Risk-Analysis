@@ -11,7 +11,7 @@ public class UserInterface {
     System.out.println("Nr.  Risk name \t\t pro  con\tsev\t Level");
     for (int i = 0; i < riskArray.length; i++) {
 
-      System.out.printf("# %2d %3s\t %d \t  %d \t%d", i, riskArray[i].getName(), riskArray[i].getProbability(),
+      System.out.printf("# %2d %3s\t %d \t  %d \t%2d", i, riskArray[i].getName(), riskArray[i].getProbability(),
           riskArray[i].getConsequense(), riskArray[i].getSeverity());
 
       displaySeverityLevel(riskArray[i].getSeverity());
