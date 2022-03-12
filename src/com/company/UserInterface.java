@@ -8,10 +8,10 @@ public class UserInterface {
   public static final String ANSI_RESET = "\u001B[0m";
 
   public void displayRiskArray(Risk[] riskArray) {
-    System.out.println("Nr.  Risk name \t\t pro  con\tsev\t Level");
+    System.out.println("Nr.  Risk name \t\t Pro  Con\tSev\t Level");
     for (int i = 0; i < riskArray.length; i++) {
 
-      System.out.printf("# %2d %3s\t %d \t  %d \t%2d", i, riskArray[i].getName(), riskArray[i].getProbability(),
+      System.out.printf("# %2d %3s\t %d \t  %d \t%2d", i+1, riskArray[i].getName(), riskArray[i].getProbability(),
           riskArray[i].getConsequense(), riskArray[i].getSeverity());
 
       displaySeverityLevel(riskArray[i].getSeverity());

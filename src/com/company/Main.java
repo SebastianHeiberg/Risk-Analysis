@@ -19,7 +19,7 @@ public class Main {
 
     for (int i = 0; i < numberRisks.length; i++) {
 
-      numberRisks[i] = new Risk(("Risk number" + i), createRandomNumber1to5(), createRandomNumber1to5());
+      numberRisks[i] = new Risk(("Risk number" + (i+1)), createRandomNumber1to5(), createRandomNumber1to5());
     }
 
     return numberRisks;
