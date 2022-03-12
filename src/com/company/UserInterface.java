@@ -8,9 +8,15 @@ public class UserInterface {
   public static final String ANSI_RESET = "\u001B[0m";
   public static final String ANSI_CYAN = "\u001B[36m";
 
-  public UserInterface userInterface = new UserInterface();
 
+  public void displayRiskArray (Risk [] riskArray) {
+    System.out.println("Nr.  Risk name \t\t pro  con\tsev\t Level");
+    for (int i = 0; i < riskArray.length; i++) {
+      System.out.printf("# %2d %3s\t %d \t  %d \t%d\n", i,riskArray[i].getName(),riskArray[i].getProbability(),
+          riskArray[i].getConsequense(),riskArray[i].getSeverity());
 
+    }
+  }
 
 
 }

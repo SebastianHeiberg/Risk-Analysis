@@ -8,12 +8,14 @@ public class Risk {
   private int severity;
 
 
+
   Risk (String name,int probability, int consequense) {
     this.name = name;
     this.probability = probability;
     this.consequense = consequense;
     severity = probability * consequense;
   }
+
 
   public String getName () {
     return name;
