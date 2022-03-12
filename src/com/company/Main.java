@@ -5,29 +5,29 @@ import java.util.Random;
 public class Main {
 
   public UserInterface userInterface = new UserInterface();
-  public final Random randomGenerator=new Random();
+  public final Random randomGenerator = new Random();
 
   public void menu() {
 
-    Risk[] risks = createRisks(25);
+    Risk[] risks = createRandomRisks(25);
     userInterface.displayRiskArray(risks);
   }
 
-  public Risk[] createRisks(int numberOfRisk) {
+  public Risk[] createRandomRisks(int numberOfRisk) {
 
     Risk[] numberRisks = new Risk[numberOfRisk];
 
     for (int i = 0; i < numberRisks.length; i++) {
 
-      numberRisks[i] = new Risk(("Risk number" + i), random1to5(), random1to5());
+      numberRisks[i] = new Risk(("Risk number" + i), createRandomNumber1to5(), createRandomNumber1to5());
     }
 
     return numberRisks;
   }
 
-  public int random1to5() {
-      int random = randomGenerator.nextInt(5)+1;
-      return random;
+  public int createRandomNumber1to5() {
+    int random = randomGenerator.nextInt(5) + 1;
+    return random;
   }
 
   public static void main(String[] args) {
